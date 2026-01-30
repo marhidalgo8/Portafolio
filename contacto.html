@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Marlen Hidalgo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-azul-marino text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-profundo sticky-top border-bottom border-ocre">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-ocre">&lt;</span> Marlen Hidalgo <span class="text-ocre">/&gt;</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-5">
+                <h2 class="display-5 fw-bold text-ocre mb-4">¡Hablemos!</h2>
+                <p class="lead mb-5">Estoy abierta a oportunidades en desarrollo Java, análisis de datos y proyectos de alto impacto tecnológico.</p>
+                
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">
+                        <i class="fas fa-envelope text-azul-claro fa-lg"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Email</h6>
+                        <p class="text-white-50">hidalgo.marleng@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">
+                        <i class="fas fa-phone text-azul-claro fa-lg"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Teléfono</h6>
+                        <p class="text-white-50">+52 5562461392</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="icon-box me-3">
+                        <i class="fas fa-map-marker-alt text-azul-claro fa-lg"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Ubicación</h6>
+                        <p class="text-white-50">Apodaca, Nuevo León, México</p>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h6 class="text-ocre fw-bold mb-3 text-uppercase">Redes Profesionales</h6>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.linkedin.com/in/marlen-hidalgo-sanchez/" class="social-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/marhidalgo8" class="social-btn" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card bg-white border-0 shadow-lg p-4 p-md-5 rounded-4">
+                    <form id="contactForm">
+                        <h3 class="text-ocre fw-bold mb-4">Enviame un mensaje</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-dark fw-semibold">Nombre</label>
+                                <input type="text" class="form-control bg-light border-ocre-claro" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-dark fw-semibold">Correo</label>
+                                <input type="email" class="form-control bg-light border-ocre-claro" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label text-dark fw-semibold">Asunto</label>
+                                <input type="text" class="form-control bg-light border-ocre-claro" placeholder="¿En qué puedo ayudarte?">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label text-dark fw-semibold">Mensaje</label>
+                                <textarea class="form-control bg-light border-ocre-claro" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4 text-center">
+                                <button type="submit" class="btn btn-ocre w-100 py-3 text-uppercase fw-bold">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-azul-profundo py-4 mt-5 text-center border-top border-ocre">
+        <p class="mb-0 text-white-50">© 2026 | Marlen G. Hidalgo Sánchez</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

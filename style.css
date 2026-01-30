@@ -1,0 +1,88 @@
+/* 1. Definición de Variables (Colores favoritos) */
+:root {
+    --azul-marino: #001d3d;       /* Fondo principal profundo */
+    --azul-intermedio: #003566;   /* Secciones secundarias */
+    --azul-electrico: #000814;    /* Navbar o footers */
+    --azul-claro: #0077b6;        /* Subtítulos */
+    --amarillo-ocre: #cca000;      /* Color de acento para botones/detalles */
+    --blanco-humo: #f8f9fa;       /* Textos y fondos claros */
+}
+
+/* 2. Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--azul-marino); /* Cambiamos blanco por azul marino */
+    color: white; /* Texto blanco para que se lea en el azul */
+    scroll-behavior: smooth;
+}
+
+/* 3. Navbar */
+.bg-azul-profundo {
+    background-color: var(--azul-electrico) !important;
+    border-bottom: 2px solid var(--amarillo-ocre);
+}
+
+.text-ocre {
+    color: var(--amarillo-ocre) !important;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--amarillo-ocre) !important;
+}
+
+/* 4. Sección Hero (Inicio) */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-intermedio) 100%);
+    padding-top: 80px;
+}
+
+.text-azul-claro {
+    color: #4cc9f0; /* Un tono celeste que resalta en el fondo oscuro */
+}
+
+.border-ocre {
+    border: 5px solid var(--amarillo-ocre) !important;
+}
+
+/* 5. Botones Personalizados */
+.btn-ocre {
+    background-color: var(--amarillo-ocre);
+    border-color: var(--amarillo-ocre);
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 12px 30px;
+}
+
+.btn-ocre:hover {
+    background-color: #b38d00; /* Un ocre un poco más oscuro al pasar el mouse */
+    border-color: #b38d00;
+    color: #fff;
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-outline-light:hover {
+    color: var(--azul-marino);
+    background-color: var(--blanco-humo);
+}
+
+/* 6. Utilidades de diseño */
+section {
+    padding: 80px 0;
+}
+
+/* Estilo para las imágenes en el hero */
+.hero-section img {
+    box-shadow: 0 0 30px rgba(204, 160, 0, 0.3); /* Resplandor ocre suave */
+}
+
+/* Animación simple para el nombre */
+h1 {
+    letter-spacing: -1px;
+}
