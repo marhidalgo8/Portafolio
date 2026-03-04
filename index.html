@@ -1,72 +1,566 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Java Fullstack Developer</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Mar Hidalgo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-profundo sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <span class="text-ocre">&lt;</span> Marlen Hidalgo <span class="text-ocre">/&gt;</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./proyectos.html">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-                </ul>
-            </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">&lt; MH/  &gt;</a>
+      
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-nav-contacto">Contacto</a>
+        <button class="dark-mode-toggle" aria-label="Alternar modo oscuro">
+          <i data-lucide="moon"></i>
+        </button>
+
+        
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-container">
+      
+      <div class="hero-content">
+        <p class="greeting">Hola, soy</p>
+        <h1 class="name">Mar Hidalgo</h1>
+        <h2 class="role">Desarrolladora Fullstack Java Jr</h2>
+        <p class="description">
+          Apasionada por crear soluciones web eficientes y escalables. Especializada 
+          en desarrollo backend con Java y frontend moderno.
+        </p>
+        
+        <div class="social-icons">
+          <a href="https://github.com/marhidalgo8" class="icon-box" target="_blank">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marlen-hidalgo-sanchez/" class="icon-box" target="_blank">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:hidalgo.marleng@gmail.com" class="icon-box">
+            <i data-lucide="mail"></i>
+          </a>
         </div>
-    </nav>
 
-   <header id="inicio" class="hero-section d-flex align-items-center">
-    <div class="container">
-        <div class="hero-card shadow-lg animate-fade-in">
-            <div class="row g-0 align-items-center">
-                
-                <div class="col-lg-5 text-center p-4">
-                    <img src="./Recursos/MAR.jpeg" alt="Mi Foto" width="400"    class="img-fluid rounded-4 border-ocre shadow photo-hero">
-                </div>
+        <div class="hero-btns">
+          <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+          <a href="#contacto" class="btn-outline">Contactar</a>
+        </div>
+      </div>
 
-                <div class="col-lg-7 p-5 text-white text-center">
-                    <div class="header-content">
-                        <h5 class="text-ocre mb-3 fw-bold">Desarrollador Java Fullstack</h5>
-                        <h1 class="display-4 fw-bold mb-3">Marlen Hidalgo</h1>
-                        <p class="lead mb-4 text-light-blue text-center" >
-                            Desarrollador Java Junior con mentalidad de Analista de Datos. Experiencia técnica en Java,  JS, y SQL, enfocada en la eficiencia del código y la integridad de los datos. Comprometids con el crecimiento profesional en entornos de alto desafío técnico y con una clara trayectoria hacia la especialización en Data Analytics y Business Intelligence.
-                        </p>
-                        <hr class="border-ocre border-2 opacity-50 mb-4" style="width: 50px;">
-                        <div class="d-flex gap-3 align-items-center text-center">
-                            <a href="./proyectos.html" class="btn btn-ocre">Ver Proyectos</a>
-                            <a href="./contacto.html" class="btn btn-outline-light">Contacto</a>
-                        </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop" alt="Espacio de trabajo de Mar">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="about">
+  <div class="section-header">
+    <h2 class="section-title">Sobre Mí</h2>
+    <div class="title-underline"></div>
+  </div>
+  
+  <div class="about-container">
+    <div class="about-image-wrapper">
+      <img src="./MAR.jpeg" alt="Mar Hidalgo - Desarrolladora">
+    </div>
+
+    <div class="about-card">
+      <p>
+        Desarrolladora fullstack junior en transición desde las ciencias, 
+        combinando pensamiento analítico y metodología rigurosa con 
+        pasión por crear soluciones tecnológicas innovadoras y eficientes.
+      </p>
+      <p>
+        Mi background en biotecnología e investigación, junto con 
+        experiencia como docente, me proporciona una perspectiva única 
+        para abordar problemas complejos, comunicar ideas técnicas con 
+        claridad y aprender constantemente nuevas tecnologías.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Experiencia</h2>
+    <p>Mi trayectoria profesional y educativa</p>
+    
+    <div class="timeline-vertical">
+      
+      <!-- Item 1: Desarrollo -->
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-title-group">
+              <h3 class="timeline-role">Desarrolladora Fullstack Java Jr</h3>
+              <p class="timeline-company">Aprendizaje Autodidacta & Bootcamp</p>
+            </div>
+            <div class="timeline-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+          </div>
+          <span class="timeline-date">2025 - Presente</span>
+          <p class="timeline-description">
+            Desarrollo de aplicaciones web completas utilizando Java, Spring Boot y tecnologías frontend modernas. Enfoque en crear soluciones eficientes, escalables y con código limpio siguiendo metodologías ágiles.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Java</span>
+            <span class="timeline-tag">Spring Boot</span>
+            <span class="timeline-tag">React</span>
+            <span class="timeline-tag">MySQL</span>
+            <span class="timeline-tag">Git</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Docencia -->
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-title-group">
+              <h3 class="timeline-role">Profesora de Matemáticas y Física</h3>
+              <p class="timeline-company">Preparetoria Tecmilenio</p>
+            </div>
+            <div class="timeline-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+          </div>
+          <span class="timeline-date">2023 - 2025</span>
+          <p class="timeline-description">
+            Enseñanza de matemáticas, física y química a estudiantes de preparatoria. Desarrollo de habilidades de comunicación técnica, pensamiento analítico y capacidad para explicar conceptos complejos de forma clara y accesible.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Comunicación Técnica</span>
+            <span class="timeline-tag">Metodología</span>
+            <span class="timeline-tag">Pensamiento Crítico</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Biotecnología -->
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-title-group">
+              <h3 class="timeline-role">Maestría y doctorado en área de Agrobiotecnología</h3>
+              <p class="timeline-company">COLPOS e ITESM</p>
+            </div>
+            <div class="timeline-icon">
+              <i data-lucide="microscope"></i>
+            </div>
+          </div>
+          <span class="timeline-date">2015 - 2024</span>
+          <p class="timeline-description">
+            Investigación científica aplicando metodología rigurosa y análisis de datos. Desarrollo de pensamiento analítico, resolución de problemas complejos y trabajo en equipo multidisciplinario.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Investigación</span>
+            <span class="timeline-tag">Análisis de Datos</span>
+            <span class="timeline-tag">R</span>
+            <span class="timeline-tag">Redacción científica</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Educación -->
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-title-group">
+              <h3 class="timeline-role">Ingeniera bioquímica industrial</h3>
+              <p class="timeline-company">UAM</p>
+            </div>
+            <div class="timeline-icon">
+              <i data-lucide="book-open"></i>
+            </div>
+          </div>
+          <span class="timeline-date">2010 - 2014</span>
+          <p class="timeline-description">
+            Formación académica con enfoque multidisciplinario (farmaceutica, alimentos, calidad), desarrollé habilidades de pensamiento científico y lógico y aplicación del método científico.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Metodología Científica</span>
+            <span class="timeline-tag">Análisis</span>
+            <span class="timeline-tag">Investigación</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <div class="section-header">
+    <h2 class="section-title">Skills</h2>
+    <div class="title-underline"></div>
+    <p class="section-subtitle">Tecnologías y metodologías con las que trabajo</p>
+  </div>
+
+  <div class="skills-container">
+
+    <!-- FRONTEND -->
+    <div class="skills-column">
+      <h3 class="skills-category">{ } Desarrollo Frontend</h3>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="file-code"></i>
+          </div>
+          <h4>HTML5</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="paintbrush"></i>
+          </div>
+          <h4>CSS3</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="braces"></i>
+          </div>
+          <h4>JavaScript</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="figma"></i>
+          </div>
+          <h4>Figma</h4>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="skills-column">
+      <h3 class="skills-category">[ ] Backend</h3>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="coffee"></i>
+          </div>
+          <h4>Java</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="terminal"></i>
+          </div>
+          <h4>Python</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="database"></i>
+          </div>
+          <h4>MySQL</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="server"></i>
+          </div>
+          <h4>Spring Boot</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="bar-chart-3"></i>
+          </div>
+          <h4>R</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="github"></i>
+          </div>
+          <h4>GitHub</h4>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- METODOLOGÍAS & TRABAJO EN EQUIPO -->
+    <div class="skills-column">
+      <h3 class="skills-category">✦ Metodologías & Trabajo en Equipo</h3>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="refresh-cw"></i>
+          </div>
+          <h4>Agile</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="users"></i>
+          </div>
+          <h4>SCRUM</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="git-branch"></i>
+          </div>
+          <h4>Control de Versiones</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="columns"></i>
+          </div>
+          <h4>Jira y Trello</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="message-circle"></i>
+          </div>
+          <h4>Comunicación Técnica</h4>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i data-lucide="lightbulb"></i>
+          </div>
+          <h4>Pensamiento Analítico</h4>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="proyectos" class="projects">
+  <div class="section-header">
+    <h2 class="section-title">Proyectos <span class="text-highlight-ocre">Seleccionados</span></h2>
+    <div class="title-underline"></div>
+  </div>
+
+  <div class="projects-container">
+    
+    <div class="project-item">
+      <div class="project-image">
+        <div class="accordion-container">
+          <div class="accordion-item active">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800" alt="Vista Desktop">
+            <div class="accordion-label">Desktop</div>
+          </div>
+          <div class="accordion-item">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800" alt="Vista Diseño">
+            <div class="accordion-label">Diseño</div>
+          </div>
+          <div class="accordion-item">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=800" alt="Vista Mobile">
+            <div class="accordion-label">Mobile</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-info">
+        <span class="project-tag">Responsive Web Experience</span>
+        <h3 class="project-name">Hilo Nacional</h3>
+        <p class="project-description">
+          "Un homenaje digital a la industria textil: plataforma web que equilibra la riqueza visual de los tejidos con una interfaz limpia, funcional y responsiva."
+        </p>
+        <div class="project-links">
+          <a href="#" class="link-demo">VER DEMO <i data-lucide="external-link"></i></a>
+          <a href="#" class="link-github">GITHUB <i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-item project-reverse">
+      <div class="project-image">
+        <div class="accordion-container">
+          <div class="accordion-item active">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800" alt="App Gym">
+            <div class="accordion-label">App</div>
+          </div>
+          <div class="accordion-item">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800" alt="Interfaz Gym">
+            <div class="accordion-label">Interfaz</div>
+          </div>
+          <div class="accordion-item">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800" alt="Código Gym">
+            <div class="accordion-label">Stack</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <span class="project-tag">Interactive Web App</span>
+        <h3 class="project-name">ProActive</h3>
+        <p class="project-description">
+          "De la visión visual a la funcionalidad digital: una tienda deportiva que combina una estética limpia con un flujo de navegación fluida en JS y CSS."
+        </p>
+        <div class="project-links">
+          <a href="#" class="link-demo">VER DEMO <i data-lucide="external-link"></i></a>
+          <a href="#" class="link-github">GITHUB <i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-image">
+        <div class="accordion-container">
+          <div class="accordion-item active">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=800" alt="Java Backend">
+            <div class="accordion-label">Backend</div>
+          </div>
+          <div class="accordion-item">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800" alt="MySQL Database">
+            <div class="accordion-label">MySQL</div>
+          </div>
+          <div class="accordion-item">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800" alt="Logic Structure">
+            <div class="accordion-label">Lógica</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <span class="project-tag">Sistema de Gestión (Java POO)</span>
+        <h3 class="project-name">Agenda JAVA</h3>
+        <p class="project-description">
+          "Desarrollo de una aplicación robusta basada en Programación Orientada a Objetos. El proyecto se centra en un núcleo lógico escalable y validaciones personalizadas."
+        </p>
+        <div class="project-links">
+          <a href="#" class="link-github">GITHUB <i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="servicios" class="services">
+  <div class="section-header">
+    <h2 class="section-title">Servicios</h2>
+    <div class="title-underline"></div>
+    <p class="section-subtitle">¿Qué ofrezco?</p>
+  </div>
+
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-icon">
+        <i data-lucide="layout"></i>
+      </div>
+      <h3>Diseño UI/UX</h3>
+      <p>
+        Transformo ideas en interfaces digitales cautivadoras, priorizando la usabilidad y accesibilidad para ofrecer experiencias memorables en cualquier dispositivo.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <i data-lucide="code-2"></i>
+      </div>
+      <h3>Páginas Web</h3>
+      <p>
+        Transformo ideas en sitios web poderosos que destacan tu marca y atraen a tu audiencia ideal con diseños funcionales e impactantes.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <i data-lucide="cpu"></i>
+      </div>
+      <h3>Integración con IA</h3>
+      <p>
+        Incorporo inteligencia artificial en proyectos web, creando soluciones automatizadas que optimizan procesos y ofrecen experiencias más personalizadas a los usuarios.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+                Construyamos algo <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-yellow-600 italic">extraordinario.</span>
+            </h2>
+
+            <div class="mt-12 bg-white dark:bg-slate-800 p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-700">
+                <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold tracking-widest text-slate-500 uppercase ml-4">Nombre</label>
+                        <input type="text" placeholder="Tu nombre..." 
+                            class="w-full px-6 py-4 rounded-full bg-slate-50 dark:bg-slate-900 border-none focus:ring-2 focus:ring-yellow-600 outline-none transition-all dark:text-white">
                     </div>
-                </div>
 
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold tracking-widest text-slate-500 uppercase ml-4">Email</label>
+                        <input type="email" placeholder="tunombre@..." 
+                            class="w-full px-6 py-4 rounded-full bg-slate-50 dark:bg-slate-900 border-none focus:ring-2 focus:ring-blue-900 outline-none transition-all dark:text-white">
+                    </div>
+
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-xs font-bold tracking-widest text-slate-500 uppercase ml-4">Idea del proyecto</label>
+                        <textarea rows="4" placeholder="Trabajemos juntos..." 
+                            class="w-full px-6 py-4 rounded-[1.5rem] bg-slate-50 dark:bg-slate-900 border-none focus:ring-2 focus:ring-yellow-600 outline-none transition-all dark:text-white resize-none"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2 mt-4">
+                        <button type="submit" 
+                            class="w-full py-4 rounded-full bg-gradient-to-r from-blue-900 to-yellow-600 text-white font-bold tracking-widest uppercase hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group">
+                            Enviar Mensaje
+                            <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</header>
+</section>
 
-<footer class="bg-azul-profundo py-4 mt-5 text-center border-top border-ocre">
-        <p class="mb-0">© 2026 | Marlen G. Hidalgo Sánchez - Desarrolladora Full Stack [cite: 44, 46]</p>
-    </footer>
+<footer class="footer">
+    <h3 class="footer-name">Mar Hidalgo</h3>
+    <p class="footer-tagline">Junior Fullstack Java Developer | Apodaca, NL</p>
+    
+    <div class="footer-social-links">
+        <a href="https://www.linkedin.com/in/marlen-hidalgo-sanchez/" class="footer-social-link" target="_blank" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://github.com/marhidalgo8" class="footer-social-link" target="_blank" aria-label="GitHub">
+            <i data-lucide="github"></i>
+        </a>
+        <a href="mailto:hidalgo.marleng@gmail.com" class="footer-social-link" aria-label="Email">
+            <i data-lucide="mail"></i>
+        </a>
+    </div>
+    
+    <div class="footer-copyright">
+        <p>© 2026 Mar Hidalgo | Investigación & Lógica</p>
+    </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="main.js"></script>
 </body>
 </html>
