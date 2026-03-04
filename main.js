@@ -11,23 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    refreshIcons();
-
     /**
-     * 2. GESTIÓN DE MODO OSCURO (UNIFICADA)
+     * 2. GESTIÓN DE MODO OSCURO (OPTIMIZADA)
      */
     const initDarkMode = () => {
         const darkModeToggle = document.querySelector('.dark-mode-toggle');
         const html = document.documentElement; 
         
-        // Función para actualizar físicamente el icono
+        // Buscamos o creamos el contenedor del icono para que Lucide no rompa la referencia
+        let iconContainer = document.getElementById('theme-icon-container');
+        if (!iconContainer && darkModeToggle) {
+            iconContainer = document.createElement('span');
+            iconContainer.id = 'theme-icon-container';
+            const originalIcon = darkModeToggle.querySelector('i');
+            if (originalIcon) {
+                darkModeToggle.replaceChild(iconContainer, originalIcon);
+            } else {
+                darkModeToggle.appendChild(iconContainer);
+            }
+        }
+
         const updateDarkModeIcon = (isDark) => {
-            const iconElement = darkModeToggle.querySelector('i');
-            if (iconElement) {
-                // Cambiamos el atributo para Lucide
-                iconElement.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
-                // Limpiamos el interior para que Lucide genere el nuevo SVG
-                iconElement.innerHTML = ''; 
+            if (iconContainer) {
+                // Limpiamos el contenido anterior (el SVG generado por Lucide)
+                iconContainer.innerHTML = ''; 
+                
+                // Creamos un nuevo elemento <i> para que Lucide lo transforme
+                const newIcon = document.createElement('i');
+                newIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+                iconContainer.appendChild(newIcon);
+                
+                // Forzamos a Lucide a renderizar el nuevo icono
                 refreshIcons();
             }
         };
@@ -35,16 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Comprobar preferencia guardada
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
 
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        if (isDark) {
             html.classList.add('dark-mode');
-            updateDarkModeIcon(true);
         } else {
             html.classList.remove('dark-mode');
-            updateDarkModeIcon(false);
         }
         
-        // Evento de clic único
+        updateDarkModeIcon(isDark);
+        
+        // Evento de clic
         darkModeToggle.addEventListener('click', () => {
             const isDarkNow = html.classList.toggle('dark-mode');
             localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
@@ -75,8 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
         accordionItems.forEach(item => {
             item.addEventListener('click', function() {
                 const container = this.closest('.accordion-container');
-                container.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
+                if (container) {
+                    container.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+                    this.classList.add('active');
+                }
             });
         });
     };
@@ -89,9 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 if (href === '#' || href === '') return;
-                e.preventDefault();
+                
                 const target = document.querySelector(href);
                 if (target) {
+                    e.preventDefault();
                     const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
                     window.scrollTo({
                         top: target.offsetTop - navbarHeight - 20,
